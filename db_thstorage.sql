@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Mar 2021 pada 15.05
--- Versi server: 10.4.14-MariaDB
--- Versi PHP: 7.4.9
+-- Generation Time: Jun 22, 2021 at 12:35 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `cuci_helm`
+-- Table structure for table `cuci_helm`
 --
 
 CREATE TABLE `cuci_helm` (
@@ -34,7 +34,7 @@ CREATE TABLE `cuci_helm` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `cuci_helm`
+-- Dumping data for table `cuci_helm`
 --
 
 INSERT INTO `cuci_helm` (`id`, `kode_penitipan`, `status_cuci`) VALUES
@@ -45,7 +45,7 @@ INSERT INTO `cuci_helm` (`id`, `kode_penitipan`, `status_cuci`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `deskripsi_penitipan`
+-- Table structure for table `deskripsi_penitipan`
 --
 
 CREATE TABLE `deskripsi_penitipan` (
@@ -60,7 +60,7 @@ CREATE TABLE `deskripsi_penitipan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `deskripsi_penitipan`
+-- Dumping data for table `deskripsi_penitipan`
 --
 
 INSERT INTO `deskripsi_penitipan` (`kode_deskripsi`, `kode_merk`, `kode_helm`, `warna_helm`, `cuci_helm`, `titip_barang`, `keterangan`, `status`) VALUES
@@ -71,7 +71,7 @@ INSERT INTO `deskripsi_penitipan` (`kode_deskripsi`, `kode_merk`, `kode_helm`, `
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `helm`
+-- Table structure for table `helm`
 --
 
 CREATE TABLE `helm` (
@@ -82,7 +82,7 @@ CREATE TABLE `helm` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `helm`
+-- Dumping data for table `helm`
 --
 
 INSERT INTO `helm` (`kode_helm`, `jenis_helm`, `createtime`, `status`) VALUES
@@ -94,7 +94,7 @@ INSERT INTO `helm` (`kode_helm`, `jenis_helm`, `createtime`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `loker`
+-- Table structure for table `loker`
 --
 
 CREATE TABLE `loker` (
@@ -104,7 +104,7 @@ CREATE TABLE `loker` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `loker`
+-- Dumping data for table `loker`
 --
 
 INSERT INTO `loker` (`kode_loker`, `nomor_loker`, `status`) VALUES
@@ -132,7 +132,7 @@ INSERT INTO `loker` (`kode_loker`, `nomor_loker`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `merk`
+-- Table structure for table `merk`
 --
 
 CREATE TABLE `merk` (
@@ -143,7 +143,7 @@ CREATE TABLE `merk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `merk`
+-- Dumping data for table `merk`
 --
 
 INSERT INTO `merk` (`kode_merk`, `nama_merk`, `createtime`, `status`) VALUES
@@ -169,7 +169,7 @@ INSERT INTO `merk` (`kode_merk`, `nama_merk`, `createtime`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_user`
+-- Table structure for table `mst_user`
 --
 
 CREATE TABLE `mst_user` (
@@ -184,7 +184,7 @@ CREATE TABLE `mst_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `mst_user`
+-- Dumping data for table `mst_user`
 --
 
 INSERT INTO `mst_user` (`nip`, `nama`, `email`, `nohp`, `password`, `createtime`, `last_login`, `status`) VALUES
@@ -194,7 +194,7 @@ INSERT INTO `mst_user` (`nip`, `nama`, `email`, `nohp`, `password`, `createtime`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `penitipan`
+-- Table structure for table `penitipan`
 --
 
 CREATE TABLE `penitipan` (
@@ -210,7 +210,7 @@ CREATE TABLE `penitipan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `penitipan`
+-- Dumping data for table `penitipan`
 --
 
 INSERT INTO `penitipan` (`kode_penitipan`, `kode_deskripsi`, `kode_loker`, `nip`, `nama_penitip`, `tgl_lahir`, `time_in`, `time_out`, `status`) VALUES
@@ -221,7 +221,7 @@ INSERT INTO `penitipan` (`kode_penitipan`, `kode_deskripsi`, `kode_loker`, `nip`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `purchase`
+-- Table structure for table `purchase`
 --
 
 CREATE TABLE `purchase` (
@@ -242,7 +242,7 @@ CREATE TABLE `purchase` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `purchase`
+-- Dumping data for table `purchase`
 --
 
 INSERT INTO `purchase` (`kode_pembayaran`, `kode_penitipan`, `kode_deskripsi`, `nip`, `nama_penitip`, `time_in`, `time_out`, `lama_penitipan`, `tarif_penitipan`, `uang_diterima`, `uang_dikembalikan`, `denda`, `tarif_cuci`, `status`) VALUES
@@ -253,59 +253,59 @@ INSERT INTO `purchase` (`kode_pembayaran`, `kode_penitipan`, `kode_deskripsi`, `
 --
 
 --
--- Indeks untuk tabel `cuci_helm`
+-- Indexes for table `cuci_helm`
 --
 ALTER TABLE `cuci_helm`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `deskripsi_penitipan`
+-- Indexes for table `deskripsi_penitipan`
 --
 ALTER TABLE `deskripsi_penitipan`
   ADD PRIMARY KEY (`kode_deskripsi`);
 
 --
--- Indeks untuk tabel `helm`
+-- Indexes for table `helm`
 --
 ALTER TABLE `helm`
   ADD PRIMARY KEY (`kode_helm`);
 
 --
--- Indeks untuk tabel `loker`
+-- Indexes for table `loker`
 --
 ALTER TABLE `loker`
   ADD PRIMARY KEY (`kode_loker`);
 
 --
--- Indeks untuk tabel `merk`
+-- Indexes for table `merk`
 --
 ALTER TABLE `merk`
   ADD PRIMARY KEY (`kode_merk`);
 
 --
--- Indeks untuk tabel `mst_user`
+-- Indexes for table `mst_user`
 --
 ALTER TABLE `mst_user`
   ADD PRIMARY KEY (`nip`);
 
 --
--- Indeks untuk tabel `penitipan`
+-- Indexes for table `penitipan`
 --
 ALTER TABLE `penitipan`
   ADD PRIMARY KEY (`kode_penitipan`);
 
 --
--- Indeks untuk tabel `purchase`
+-- Indexes for table `purchase`
 --
 ALTER TABLE `purchase`
   ADD PRIMARY KEY (`kode_pembayaran`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `cuci_helm`
+-- AUTO_INCREMENT for table `cuci_helm`
 --
 ALTER TABLE `cuci_helm`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
